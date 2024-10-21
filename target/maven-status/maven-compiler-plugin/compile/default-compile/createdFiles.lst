@@ -1,0 +1,5 @@
+pl\polsl\controller\package-info.class
+pl\polsl\main\Main.class
+pl\polsl\controller\Controller.class
+pl\polsl\model\Model.class
+pl\polsl\view\View.class
