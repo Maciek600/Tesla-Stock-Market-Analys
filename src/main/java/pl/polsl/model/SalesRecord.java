@@ -6,8 +6,8 @@ package pl.polsl.model;
 
 import java.time.LocalDate;
 /**
- * @version 1.0
- * @author Maciej
+ * @version 1.4
+ * @author Maciej Fajlhauer
  */
 /**
  * Class representing a record of sales data from a CSV file.
@@ -15,25 +15,25 @@ import java.time.LocalDate;
 public class SalesRecord {
     
     /** Date of the sales data. */
-    private LocalDate date;
+    private final LocalDate date;
     
     /** First sales figure. */
-    private double open;
+    private final double open;
     
     /** Second sales figure. */
-    private double high;
+    private final double high;
     
     /** Third sales figure. */
-    private double low;
+    private final double low;
     
     /** Fourth sales figure. */
-    private double close;
+    private final double close;
     
     /** Fifth sales figure. */
-    private double adjClose;
+    private final double adjClose;
     
     /** Total sales volume. */
-    private long volume;
+    private final long volume;
 
     /**
      * Constructor to initialize the sales record.

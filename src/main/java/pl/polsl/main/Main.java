@@ -3,7 +3,11 @@ package pl.polsl.main;
 import pl.polsl.controller.Controller;
 import pl.polsl.model.Model;
 import pl.polsl.view.View;
-
+import pl.polsl.exception.SalesDataException;
+/**
+ * @version 1.4
+ * @author Maciej Fajlhauer
+ */
 /**
  * Main class responsible for starting the application.
  */
@@ -34,14 +38,14 @@ public class Main {
         Model model = new Model();
         View view = new View(model);
         Controller controller = new Controller(model, view);
-
-        // Call the decide method (default logic)
-//        controller.decide();
-
-        // Read data from the CSV file
+//
+//        // Read data from the CSV file
+        try{
         controller.readCSV(fileName);
-
-        // Display the records after reading
-        controller.displayRecords();
+        } catch(SalesDataException e){
+            System.err.println("Error processing the sales data: " + e.getMessage());
+           // e.pritnStackTrace();
+        }
+        
     }
 }
