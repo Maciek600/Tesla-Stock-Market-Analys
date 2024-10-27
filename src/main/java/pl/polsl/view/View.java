@@ -1,15 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pl.polsl.view;
 import java.util.List;
 import pl.polsl.model.*;
 import javax.swing.*;
 import java.awt.*;
 /**
- * @version 1.4
+ * @version 1.5
  * @author Maciej Fajlhauer
+ */
+/**
+ * The View class is responsible for displaying information to the user 
+ * and interacting with the GUI. It receives updates from the Controller 
+ * when the Model changes, retrieves user input, and sends it to the 
+ * Controller. It also directly references the Model to reduce the 
+ * need for data flow through the Controller.
  */
 public class View {
     private JFrame frame;
@@ -122,7 +125,7 @@ public class View {
      * Prepares the GUI elements, setting up the frame, buttons, and result area.
      */
     private void prepareGUI() {
-        frame = new JFrame("Sales Data Analysis");
+        frame = new JFrame("Stock Market Analysis Of Tesla");
         frame.setSize(600, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());

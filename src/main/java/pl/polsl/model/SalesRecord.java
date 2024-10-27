@@ -1,16 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pl.polsl.model;
-
 import java.time.LocalDate;
 /**
- * @version 1.4
+ * @version 1.5
  * @author Maciej Fajlhauer
  */
 /**
- * Class representing a record of sales data from a CSV file.
+ * The SalesRecord class represents a single record of sales data. 
+ * It stores important information such as the date of the sale, 
+ * the volume of shares sold, and the closing price. This class 
+ * provides methods to access and manipulate the sales data, 
+ * making it easy to work with individual records in the application.
  */
 public class SalesRecord {
     

@@ -11,15 +11,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import pl.polsl.exception.SalesDataException;
 /**
- * @version 1.4
+ * @version 1.5
  * @author Maciej Fajlhauer
  */
 /**
- * Controller class responsible for handling business logic, including reading CSV data and interacting with the model and view.
+ * The Controller class connects the Model and the View. It takes user input, 
+ * checks if the data is correct, and decides what to do with that data in 
+ * the Model. The Controller has references to both the View and the Model, 
+ * allowing it to call Model methods and ask the View to update itself. 
+ * It also manages exceptions related to sales data to ensure the application 
+ * runs smoothly and provides error messages to the user when needed.
  */
 public class Controller implements PropertyChangeListener{
 
@@ -52,6 +55,7 @@ public class Controller implements PropertyChangeListener{
      * Reads sales data from a CSV file, converts it into objects, and stores it in the records list.
      *
      * @param fileName the path to the CSV file
+     * @throws pl.polsl.exception.SalesDataException
      */
     public void readCSV(String fileName) throws SalesDataException {
         String line;
@@ -64,7 +68,7 @@ public class Controller implements PropertyChangeListener{
             // Read each line from the CSV file
             while ((line = br.readLine()) != null) {
                 
-                // Pomiń pierwszą linię (nagłówki)
+                // Skip the first line (headers)
             if (firstLine) {
                 firstLine = false;
                 continue;

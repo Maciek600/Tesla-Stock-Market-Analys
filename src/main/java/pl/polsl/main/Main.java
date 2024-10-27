@@ -5,11 +5,18 @@ import pl.polsl.model.Model;
 import pl.polsl.view.View;
 import pl.polsl.exception.SalesDataException;
 /**
- * @version 1.4
+ * @version 1.5
  * @author Maciej Fajlhauer
  */
 /**
- * Main class responsible for starting the application.
+ * The Main class is the entry point of the application. 
+ * It is responsible for starting the program and setting up 
+ * the initial state of the application. The Main class creates 
+ * instances of the Controller, View, and Model classes, and 
+ * makes sure they work together correctly to provide the user 
+ * with a seamless experience. 
+ * It also reads the filename from the command-line arguments 
+ * to load the sales data needed for the application.
  */
 public class Main {
 
@@ -38,13 +45,12 @@ public class Main {
         Model model = new Model();
         View view = new View(model);
         Controller controller = new Controller(model, view);
-//
-//        // Read data from the CSV file
+        
+        // Read data from the CSV file
         try{
         controller.readCSV(fileName);
         } catch(SalesDataException e){
             System.err.println("Error processing the sales data: " + e.getMessage());
-           // e.pritnStackTrace();
         }
         
     }

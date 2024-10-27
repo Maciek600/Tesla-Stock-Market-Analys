@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pl.polsl.model;
 import javax.swing.event.SwingPropertyChangeSupport;
 import java.beans.PropertyChangeListener;
@@ -13,9 +9,17 @@ import java.util.HashMap;
 import pl.polsl.exception.SalesDataException;
 
 /**
- * @version 1.4
+ * @version 1.5
  * @author Maciej Fajlhauer
  */
+/**
+ * The Model class manages application data, handling operations like 
+ * retrieving, sorting, and filtering sales records.
+ * The Model does not know about the View or the Controller; it just provides 
+ * a way to access and update the data. It can also notify other parts of the 
+ * application when its data changes.
+ */
+ 
 public class Model {
     
     /** List of sales records */
