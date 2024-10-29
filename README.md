@@ -28,3 +28,4 @@ The application is organized into three main packages to support MVC principles:
 # Usage
 1. Compile the application:
    javac Main.java -i path/to/your/stockdata.csv
+2. Chosse one of the four buttons to see result. 
