@@ -13,7 +13,7 @@ This Java application is designed for analyzing stock sales data, providing insi
 ## Project Structure
 The application is organized into three main packages to support MVC principles:
 
-- **Model**: This package contains the data model classes for the application.
+# **Model**: This package contains the data model classes for the application.
  It includes:
  'Model' which manages the application data and logic,
  'SalesRecord' which represents individual sales records containing relevant information such as date, volume, and closing price.
@@ -27,5 +27,4 @@ The application is organized into three main packages to support MVC principles:
 
 ## Usage
 1. Compile the application:
-   ```bash
-   javac Main.java
+   javac Main.java -i path/to/your/stockdata.csv
