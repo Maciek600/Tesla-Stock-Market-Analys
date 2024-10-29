@@ -14,9 +14,9 @@ This Java application is designed for analyzing stock sales data, providing insi
 The application is organized into three main packages to support MVC principles:
 
 - **Model**: This package contains the data model classes for the application.
-- It includes:
-- - 'Model' which manages the application data and logic,
-- - 'SalesRecord' which represents individual sales records containing relevant information such as date, volume, and closing price.
+ It includes:
+- 'Model' which manages the application data and logic,
+- 'SalesRecord' which represents individual sales records containing relevant information such as date, volume, and closing price.
   The model is independent of the view and controller, ensuring a clear separation of concerns in accordance with the MVC pattern.
   
 - **View**: This package handles the user interface of the application.
