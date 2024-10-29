@@ -20,7 +20,7 @@ The application is organized into three main packages to support MVC principles:
   The model is independent of the view and controller, ensuring a clear separation of concerns in accordance with the MVC pattern.
   
 ## **View**: This package handles the user interface of the application.
-- It is responsible for displaying information to the user and receiving user inputs. The view updates in response to changes in the model and interacts with the controller to reflect the current state of the application.
+ It is responsible for displaying information to the user and receiving user inputs. The view updates in response to changes in the model and interacts with the controller to reflect the current state of the application.
   
 ## **Controller**: This package contains the controller classes for the application. It manages the flow of data between the 'model' and 'view'.
   The controller processes user inputs, interacts with the model to perform operations, and requests updates from the view as needed. It also handles exceptions that may arise during data processing.
